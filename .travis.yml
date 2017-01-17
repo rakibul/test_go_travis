@@ -1,16 +1,13 @@
 language: go
 
 go:
- - 1.7.x
- - release
- - tip
+  - 1.6
+  - 1.7
+  - tip
 
 before_install:
  - go get github.com/rakibul/test_go_travis
- - go get github.com/tools/godep
-
-install:
- - godep restore
+ - go get github.com/gorilla/mux
 
 script:
  - go test -v ./...
