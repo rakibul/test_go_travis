@@ -2,11 +2,12 @@ language: go
 
 go: 1.7.x
 
+before_install:
+ - go get github.com/rakibul/test_go_travis
+ - go get github.com/tools/godep
+
 install:
-  - export PATH=$PATH:$HOME/gopath/bin
-  - go get github.com/tools/godep
-  - godep restore
+ - godep restore
 
 script:
-  - go test
-  - test -z "$(go fmt ./...)"
+ - go test -v ./...
