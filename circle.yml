@@ -8,3 +8,8 @@ test:
     - golint ./...
     - go tool vet .
     - go test -v -race ./...
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: test_go_travis
