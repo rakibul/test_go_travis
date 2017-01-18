@@ -2,9 +2,6 @@
 	"ImportPath": "github.com/rakibul/test_go_travis",
 	"GoVersion": "go1.7",
 	"GodepVersion": "v76",
-	"Packages": [
-		"./..."
-	],
 	"Deps": [
 		{
 			"ImportPath": "github.com/gorilla/mux",
