@@ -9,9 +9,7 @@ test:
     - go tool vet .
     - go test -v -race ./...
 deployment:
-  production:
+  staging:
     branch: master
-    commands:
-	  - chmod +x heroku_deploy.sh
-      - ./heroku_deploy.sh test_go_travis:
-          timeout: 300
+    heroku:
+      appname: test_go_travis
