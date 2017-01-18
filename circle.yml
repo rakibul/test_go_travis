@@ -4,13 +4,7 @@ dependencies:
     - "go get -u github.com/golang/lint/golint"
     - "go get -u github.com/gorilla/mux"
 deployment: 
-  staging: 
+  production: 
     branch: master
     heroku: 
       appname: test_go_travis
-test: 
-  override: 
-    - "if [[ -n $(gofmt -l .) ]]; then echo \"Please run gofmt\"; exit 1; fi"
-    - "golint ./..."
-    - "go tool vet ."
-    - "go test -v -race ./..."
