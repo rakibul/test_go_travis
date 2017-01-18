@@ -9,7 +9,7 @@ test:
     - go tool vet .
     - go test -v -race ./...
 deployment:
-  staging:
+  prod:
     branch: master
     heroku:
       appname: test_go_travis
