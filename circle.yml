@@ -13,5 +13,3 @@ deployment:
         ? "heroku run rake db:migrate --app test_go_travis"
         : 
           timeout: 400
-    heroku: 
-      appname: test_go_travis
