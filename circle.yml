@@ -12,5 +12,5 @@ deployment:
   production:
     branch: master
     commands:
-      - ./script/heroku_deploy.sh test_go_travis:
+      - ./heroku_deploy.sh test_go_travis:
           timeout: 300
